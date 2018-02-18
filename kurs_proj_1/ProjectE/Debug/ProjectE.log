@@ -1,0 +1,5 @@
+﻿  Date.cpp
+c:\users\petr\source\repos\kurs_proj_1\projecte\date.cpp(165): warning C4129: .: неизвестная escape-последовательность
+c:\users\petr\source\repos\kurs_proj_1\projecte\date.cpp(167): warning C4129: .: неизвестная escape-последовательность
+c:\users\petr\source\repos\kurs_proj_1\projecte\date.cpp(191): warning C4101: a: неиспользованная локальная переменная
+  ProjectE.vcxproj -> C:\Users\Petr\source\repos\kurs_proj_1\Debug\ProjectE.exe
