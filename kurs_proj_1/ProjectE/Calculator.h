@@ -14,7 +14,7 @@ public:
 	void set_format();
 	void print_res();
 private:
-	Date oper1, oper2;
+	Date oper1, oper2, oper4;
 	int oper3;
 	char sign;
 	char type_answer;

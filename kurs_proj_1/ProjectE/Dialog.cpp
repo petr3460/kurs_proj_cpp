@@ -1,4 +1,5 @@
 #include "Dialog.h"
+#include <fstream>
 
 Dialog::Dialog() :Vector()
 {
@@ -57,6 +58,20 @@ void Dialog::EndExec() {
 	EndState = 1;
 }
 
+
+void Readlog() {
+	std::ifstream fin;
+	fin.open("log.txt");
+	if (fin.is_open()) {
+		char ch;
+		while (fin.get(ch)) {
+			cout << ch;
+		}
+	}
+	else cout << "File can't be open " << endl;
+	fin.close();
+}
+
 //обработчик событий
 void Dialog::HandleEvent(TEvent &event) {
 	if (event.what == evMessage) {
@@ -74,11 +89,12 @@ void Dialog::HandleEvent(TEvent &event) {
 			ClearEvent(event);
 			break; }
 		case cmLog:
-			
+			Readlog();
 			ClearEvent(event);
 			break;
 
 		case cmQuit:EndExec();
+			EndExec();
 			ClearEvent(event);
 			break;
 
